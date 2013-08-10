@@ -9,12 +9,13 @@ if (have_posts()){
     $titulo = get_the_title();
     $contenido = get_the_content();
 
-    $numero = $titulo;
+    $seccion = foo_div("","titulo", foo_h( $titulo, 2 ) );
+
     if( foo_featImg() != "" ){
       $img = foo_img( foo_featImg() );
-      $numero .= $img;
+      $seccion .= $img;
     }
-    $numero .= $contenido;
+    $seccion .= $contenido;
   }
 }
 $articulos = "";
@@ -37,7 +38,7 @@ while ($query->have_posts()){
 }
 
 
-$echo = $numero;
+$echo = foo_div("seccion","",$seccion);
 $echo .= foo_div("articulos","",$articulos);
 $echo = foo_div("","large-12 columns",$echo);
 

@@ -14,8 +14,13 @@ img {
     width:100%;
 }
 
+.row {
+    max-width: 100%;
+}
+
 .top-bar {
     height:60px;
+    margin:0;
 }
 .top-bar .title-area > div {
     height:100%;
@@ -25,7 +30,6 @@ img {
     display:inline-block;
     font-size:30px;
     width:200px;
-    height:80px;
 }
 .top-bar img {
     width:auto;
@@ -49,3 +53,19 @@ padding:5px;
 }
 
 
+#seccion .titulo,
+article.articulo header {
+    padding:5px;
+    background-color: #bbe8df;
+
+}
+
+
+#seccion .titulo h2,
+article.articulo header h2 {
+    font-size:1.0em;
+}
+
+article.articulo header a {
+    color:#000;
+}
