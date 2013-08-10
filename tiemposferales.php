@@ -4,9 +4,9 @@
 
 
 
-$titulo = get_the_title();
+$titulo = foo_div("","titulo",get_the_title());
 $img = foo_img( foo_featImg() );
-$contenido = get_the_content();
+$contenido = foo_div("","contenido",get_the_content());
 $numero = $titulo . $img . $contenido;
 
 $articulos = "";
@@ -30,7 +30,7 @@ while ($query->have_posts()){
 }
 
 
-$echo = $numero;
+$echo = foo_div("numero","", $numero);
 $echo .= foo_div("articulos","",$articulos);
 $echo = foo_div("","large-12 columns",$echo);
 

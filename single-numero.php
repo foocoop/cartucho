@@ -8,7 +8,7 @@ if ( have_posts() ) {
     the_post();
     $titulo = get_the_title();
     $img = foo_img( foo_featImg() );
-    $contenido = get_the_content();
+    $contenido = foo_div("","contenido",get_the_content());
   }
 }
 

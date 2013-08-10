@@ -15,7 +15,7 @@ if (have_posts()){
       $img = foo_img( foo_featImg() );
       $seccion .= $img;
     }
-    $seccion .= $contenido;
+    $seccion .= foo_div("","contenido",$contenido);
   }
 }
 $articulos = "";

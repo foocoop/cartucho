@@ -6,6 +6,10 @@
  * 
  * */
 
+body {
+    font-family:Monaco, monospace;
+}
+
 div {
 }
 
@@ -22,6 +26,7 @@ img {
     height:60px;
     margin:0;
 }
+
 .top-bar .title-area > div {
     height:100%;
     float:left;
@@ -60,12 +65,37 @@ article.articulo header {
 
 }
 
-
+article p {
+    padding:10px 20px;
+}
 #seccion .titulo h2,
 article.articulo header h2 {
     font-size:1.0em;
 }
 
+article .imagen,
+article .imagen img {
+    width:100%;
+}
+
 article.articulo header a {
     color:#000;
+}
+
+#numero .contenido,
+#seccion .contenido,
+article .texto {
+    padding:15px 30px;
+    text-align:justify;
+    line-height:1.3em;
+    -moz-column-count:2; /* Firefox */
+    -webkit-column-count:2; /* Safari and Chrome */
+    column-count:2;
+    column-gap:40px;
+    -moz-column-gap:40px; /* Firefox */
+    -webkit-column-gap:40px; /* Safari and Chrome */
+}
+
+p {
+margin:10px 0;
 }
