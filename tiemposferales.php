@@ -1,7 +1,7 @@
+
+
 <?php
 
-$args = array('post_type'=>'articulo');
-$query = new WP_Query( $args);
 
 
 $titulo = get_the_title();
@@ -11,6 +11,8 @@ $numero = $titulo . $img . $contenido;
 
 $articulos = "";
 
+$args = array('post_type'=>'seccion');
+$query = new WP_Query( $args);
 while ($query->have_posts()){
 
   $query->the_post();
@@ -24,6 +26,7 @@ while ($query->have_posts()){
   $link = get_permalink();
 
   $articulos .= foo_div("","articulo", $titulo . $img. $extracto, $link );
+
 }
 
 
@@ -37,9 +40,6 @@ $echo .= 'var articulos = $("#articulos");';
 $echo .= 'articulos.masonry({ columnWidth: 230, itemSelector: ".articulo" });';
 $echo .= '});';
 $echo .= '</script>';
-
-
-
 
 return $echo;
 

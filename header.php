@@ -36,12 +36,24 @@
 
 <body <?php body_class(); ?>>
 
-	<nav class="top-bar">
-		<ul class="title-area">
-			<li class="name"><h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo('name'); ?></a></h1></li>
-			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-		</ul>
-		<section class="top-bar-section">
+  <nav class="top-bar">
+    <div class="title-area">
+
+        <?php  echo foo_div("","img", foo_img( foo_thumb(
+          foo_imgdir("cartucho.png"), 70, 50 ) ), site_url() );
+        ?>
+
+      <div class="name"><h1>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+          <?php echo foo_vcenter( get_bloginfo('name') ); ?>
+        </a></h1>
+      </div>
+      
+      <div class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></div>
+    </div>
+
+    
+    <section class="top-bar-section">
 			<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'menu_class' => 'left', 'container' => '', 'fallback_cb' => 'foundation_page_menu', 'walker' => new foundation_navigation() ) ); ?>
 		</section>
 	</nav>
