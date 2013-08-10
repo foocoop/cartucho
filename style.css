@@ -6,3 +6,27 @@
  * 
  * */
 
+div {
+    border:1px solid #f8f8f8;
+}
+
+img {
+    width:100%;
+    max-width:100%;
+}
+
+#articulos .articulo{
+    width:230px;
+} 
+
+#articulos .extracto,
+#articulos .titulo {
+padding:5px;
+}
+#articulos .titulo {
+    background-color: #bbe8df;
+}
+
+#articulos .articulo a {
+    color:#000;
+}

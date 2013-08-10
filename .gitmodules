@@ -1,0 +1,3 @@
+[submodule "footilities"]
+	path = footilities
+	url = https://github.com/foocoop/footilities.git

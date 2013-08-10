@@ -31,6 +31,7 @@ function cpt() {
 			'has_archive' => true	 	)
 	);
 	register_taxonomy_for_object_type('numero', 'articulo');
+
 	register_taxonomy_for_object_type('seccion', 'articulo');
 
 	
@@ -63,7 +64,8 @@ function cpt() {
 			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'sticky'),
 			'has_archive' => true	 	)
 	);
-	
+	register_taxonomy_for_object_type('mostrar_en', 'numero');	
+
 	register_post_type( 'numero_anterior',
 		array('labels' => array(
 			'name' => __('Números anteriores', 'Número anterior general name'),
@@ -131,6 +133,25 @@ function cpt() {
 	add_action( 'init', 'cpt');
 
 
+
+    register_taxonomy( 'mostrar_en', 
+    	array('articulo'),
+    	array('hierarchical' => true,
+    		'labels' => array(
+    			'name' => __( 'Mostrar en' ),
+    			'singular_name' => __( 'Mostrar en' ),
+    			'search_items' =>  __( 'Buscar "mostrar en"' ),
+    			'all_items' => __( 'Todos los "Mostrar en"' ),
+    			'parent_item' => __( '"Mostrar en" superior' ),
+    			'edit_item' => __( 'Editar "Mostrar en" ' ),
+    			'update_item' => __( 'Actualizar "Mostrar en"' ),
+    			'add_new_item' => __( 'Añadir "Mostrar en"' ),
+    			'new_item_name' => __( 'Nombre : "Mostrar en"' )
+    		),
+    		'show_ui' => true,
+    		'query_var' => true,
+    	)
+    );   
 
 
     register_taxonomy( 'numero', 
