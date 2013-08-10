@@ -9,7 +9,7 @@ $img = foo_img( foo_featImg() );
 $contenido = get_the_content();
 $numero = $titulo . $img . $contenido;
 
-
+$articulos = "";
 
 while ($query->have_posts()){
 
