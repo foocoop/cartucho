@@ -24,6 +24,8 @@ if ( have_posts() ) {
         $img = foo_img( foo_featImg() );
         echo foo_div("","imagen",$img);
         $txt = get_the_content();
+        $txt = foo_filter( $txt, 'content' );
+        
 //        $txt = foo_strip(get_the_content(), "img" );
         
         echo foo_div("","texto",$txt);
