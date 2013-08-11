@@ -8,8 +8,9 @@ if (have_posts()){
     $slug = the_slug();
     $titulo = get_the_title();
     $contenido = foo_filter( get_the_content(), "content");
-
-    $seccion = foo_div("","titulo", foo_h( $titulo, 2 ) );
+    $meta = get_post_meta( get_the_ID() );
+    $editorxs = $meta["editorxs"][0];
+    $seccion = foo_div("","titulo", foo_h( $titulo, 2 ) . foo_h( $editorxs, 6 ) );
 
     if( foo_featImg() != "" ){
       $img = foo_img( foo_featImg() );
@@ -58,4 +59,5 @@ $echo .= '</script>';
 echo $echo;
 
 get_footer();
+
 ?>
