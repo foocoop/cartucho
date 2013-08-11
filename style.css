@@ -42,8 +42,13 @@ img {
 
 
 #articulos .articulo{
+
     width:230px;
 } 
+#articulos .articulo img {
+    height:auto;
+}
+
 
 #articulos .extracto,
 #articulos .titulo {
