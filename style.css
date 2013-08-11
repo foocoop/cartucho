@@ -46,7 +46,7 @@ img {
     width:230px;
 } 
 #articulos .articulo img {
-    height:auto;
+    min-height:150px;
 }
 
 
