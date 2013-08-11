@@ -87,6 +87,7 @@ article.articulo header a {
 
 #numero .contenido,
 #seccion .contenido,
+#seccion.texto,
 article .texto {
     padding:15px 30px;
     text-align:justify;

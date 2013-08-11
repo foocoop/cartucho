@@ -15,7 +15,7 @@ if (have_posts()){
       $img = foo_img( foo_featImg() );
       $seccion .= $img;
     }
-    $seccion .= foo_div("","contenido",$contenido);
+    //$seccion .= foo_div("","contenido",$contenido);
   }
 }
 $articulos = "";
@@ -42,6 +42,7 @@ while ($query->have_posts()){
 
 $echo = foo_div("seccion","",$seccion);
 $echo .= foo_div("articulos","",$articulos);
+$echo .= foo_div("seccion","texto",$contenido);
 $echo = foo_div("","large-12 columns",$echo);
 
 $echo .= '<script type="text/javascript">';
