@@ -11,7 +11,7 @@ $numero = $titulo . $img . $contenido;
 
 $articulos = "";
 
-$args = array('post_type'=>'seccion','posts_per_pages'=>-1);
+$args = array('post_type'=>'seccion','posts_per_page'=>-1);
 $query = new WP_Query( $args);
 while ($query->have_posts()){
 
