@@ -104,7 +104,8 @@ article.articulo header a {
 #numero .contenido,
 #seccion .contenido,
 #seccion.columnas,
-article.texto {
+article.texto,
+.columnas {
     padding:15px 30px;
     text-align:justify;
     line-height:1.3em;
