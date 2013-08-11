@@ -69,7 +69,7 @@ img {
 #articulos .articulo a {
     color:#000;
 }
-.articulo:hover{
+#articulos .articulo:hover{
     background:#bbe8df;
 }
 .articulo:hover .titulo {
