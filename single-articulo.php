@@ -26,8 +26,6 @@ if ( have_posts() ) {
         $txt = get_the_content();
         $txt = foo_filter( $txt, 'content' );
         
-//        $txt = foo_strip(get_the_content(), "img" );
-        
         echo foo_div("","texto",$txt);
 
         /* $imgarr = foo_imgs($post->ID);

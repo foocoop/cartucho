@@ -32,7 +32,13 @@
 
 </head>
 
+
+
 <script src="<?php echo themeDir(); ?>/scripts/masonry.pkgd.min.js"></script>
+
+<script src="<?php echo themeDir(); ?>/scripts/mobilyslider/js/mobilyslider.js"></script>
+<!-- <script src="<?php echo themeDir(); ?>/scripts/unslider/src/unslider.min.js"></script> -->
+
 
 <nav class="top-bar">
     <div class="title-area">

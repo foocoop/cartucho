@@ -32,7 +32,7 @@ while ($query->have_posts()){
 }
 
 
-$echo = foo_div("numero","", $numero);
+$echo = foo_div("seccion","", $numero);
 $echo .= foo_div("articulos","",$articulos);
 $echo = foo_div("","large-12 columns",$echo);
 
