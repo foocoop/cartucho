@@ -7,8 +7,11 @@ if ( have_posts() ) {
   while ( have_posts() ) {
     the_post();
     $titulo = get_the_title();
+    $titulo = foo_filter( $titulo, 'title' );
     $img = foo_img( foo_featImg() );
-    $contenido = foo_div("","contenido",get_the_content());
+    $contenido = get_the_content();
+    $contenido = foo_filter( $contenido, 'content');
+    $contenido = foo_div("","contenido", $contenido );
   }
 }
 

@@ -7,7 +7,7 @@ if (have_posts()){
     the_post(); 
     $slug = the_slug();
     $titulo = get_the_title();
-    $contenido = get_the_content();
+    $contenido = foo_filter( get_the_content(), "content");
 
     $seccion = foo_div("","titulo", foo_h( $titulo, 2 ) );
 
@@ -26,8 +26,10 @@ while ($query->have_posts()){
 
   $query->the_post();
   $titulo = get_the_title();
+  $titulo = foo_filter( $titulo, 'title');
   $titulo = foo_div("","titulo",$titulo); 
   $extracto = get_the_excerpt();
+  $extracto = foo_filter( $extracto, 'excerpt');
   $extracto= foo_div("","extracto",$extracto);
   if( foo_featImg() ) {
     $img = foo_img( foo_thumb( foo_featImg(), 300, 200 ) );

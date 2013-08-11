@@ -1,12 +1,9 @@
-
-
 <?php
-
-
-
 $titulo = foo_div("","titulo",get_the_title());
 $img = foo_img( foo_featImg() );
-$contenido = foo_div("","contenido",get_the_content());
+$contenido = get_the_content();
+$contenido = foo_filter( $contenido, 'content');
+$contenido = foo_div("","contenido", $contenido );
 $numero = $titulo . $img . $contenido;
 
 $articulos = "";
@@ -17,8 +14,9 @@ while ($query->have_posts()){
 
   $query->the_post();
   $titulo = get_the_title();
+  $titulo = foo_filter( $titulo, "title" );
   $titulo = foo_div("","titulo",$titulo); 
-  $extracto = get_the_excerpt();
+  $extracto = foo_filter(get_the_excerpt(),'excerpt');
   $extracto= foo_div("","extracto",$extracto);
   if( foo_featImg() ) {
     $img = foo_img( foo_thumb( foo_featImg(), 300, 200 ) );
