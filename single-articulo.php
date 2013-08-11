@@ -26,7 +26,7 @@ if ( have_posts() ) {
         $txt = get_the_content();
         $txt = foo_filter( $txt, 'content' );
         
-        echo foo_div("","texto",$txt);
+        echo foo_div("","texto columnas",$txt);
 
         /* $imgarr = foo_imgs($post->ID);
         $imgs = "";

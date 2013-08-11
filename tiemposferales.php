@@ -13,9 +13,12 @@ $query = new WP_Query( $args);
 while ($query->have_posts()){
 
   $query->the_post();
+  $titulo = "";
+  /*
   $titulo = get_the_title();
   $titulo = foo_filter( $titulo, "title" );
-  $titulo = foo_div("","titulo",$titulo); 
+  $titulo = foo_div("","titulo",$titulo);
+   */
   $extracto = foo_filter(get_the_excerpt(),'excerpt');
   $extracto= foo_div("","extracto",$extracto);
   if( foo_featImg() ) {
