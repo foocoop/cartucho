@@ -20,6 +20,6 @@
 		<a href="<?php the_permalink(); ?>" class="th" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
 	<?php endif; ?>
 	
-	<?php echo foo_open("","contenido"); the_content(); echo foo_close(); ?>
+	<?php echo foo_div("","contenido", foo_filter( get_the_content(), 'content' )); ?>
 
 </article>
