@@ -22,7 +22,11 @@ while ($query->have_posts()){
   $extracto= foo_div("","extracto",$extracto);
   if( foo_featImg() ) {
     $img = foo_img( foo_thumb( foo_featImg(), 300, 200 ) );
-  } 
+  }
+  else {
+    $img = NULL;
+  }
+
   $link = get_permalink();
 
   $articulos .= foo_div("","articulo", $titulo . $img. $extracto, $link );

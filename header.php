@@ -33,10 +33,8 @@
 </head>
 
 <script src="<?php echo themeDir(); ?>/scripts/masonry.pkgd.min.js"></script>
-<script src="<?php echo themeDir(); ?>/scripts/columnizer/src/jquery.columnizer.js"></script>
-<script src="http://cufon.shoqolate.com/js/cufon-yui.js" type="text/javascript"></script>
 
-  <nav class="top-bar">
+<nav class="top-bar">
     <div class="title-area">
 
         <?php  echo foo_div("","img", foo_img( foo_thumb(
