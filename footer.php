@@ -29,14 +29,13 @@ foo_div("","large-12 columns",$footer);
      arrows: true
    });
 
-
-   if( $('#perimetral').length > 0 ) {
-     $('#perimetral').parent().css({
-       '-moz-column-count': this.content.length,
-       '-webkit-column-count': this.content.length,
-       'column-count': this.content.length,
-       'width': this.content.length * 150 + 'px' 
-     });
+   
+   
+   if( $('#perimetral').length ) {
+     
+       $('#perimetral').parent().removeClass('columnas');
+       
+     
    }
  });
 
