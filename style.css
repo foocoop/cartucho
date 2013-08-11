@@ -139,6 +139,11 @@ p {
     position:absolute;
     background:#fff;
 }
+
+.notfull{
+    width:auto;
+    height:auto;
+}
     
 /*
 .slider { position: relative; overflow: auto; }
