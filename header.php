@@ -19,7 +19,7 @@
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans|Cabin' rel='stylesheet' type='text/css'>
 <!-- Set the viewport width to device width for mobile -->
 <meta name="viewport" content="width=device-width" />
 
@@ -47,10 +47,10 @@
           foo_imgdir("cartucho.png"), 70, 50 ) ), site_url() );
         ?>
 
-      <div class="name"><h1>
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-          <?php echo foo_vcenter( get_bloginfo('name') ); ?>
-        </a></h1>
+      <div class="name">
+        <?php  echo foo_div("","img", foo_img( foo_imgdir("cartuchotxt.jpg") ), site_url() );
+        ?>
+
       </div>
       
       <div class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></div>

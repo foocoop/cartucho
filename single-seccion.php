@@ -49,7 +49,12 @@ $echo = foo_div("","large-12 columns",$echo);
 $echo .= '<script type="text/javascript">';
 $echo .= 'jQuery(document).ready(function($){';
 $echo .= 'var articulos = $("#articulos");';
-$echo .= 'articulos.masonry({ columnWidth: 230, itemSelector: ".articulo" });';
+$echo .= 'var articulos_num = $("#articulos .articulo").length;';
+$echo .= 'if( articulos_num > 4 ) articulos_num = 4;';
+$echo .= 'var width = articulos.width();';
+$echo .= 'var col_width = width / articulos_num;';
+$echo .= '$("#articulos .articulo").css({width: col_width });';
+$echo .= 'articulos.masonry({ columnWidth: col_width, itemSelector: ".articulo" });';
 $echo .= '});';
 $echo .= '</script>';
 
