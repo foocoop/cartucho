@@ -90,13 +90,22 @@ article.articulo header a {
 #numero .contenido,
 #seccion .contenido,
 #seccion.texto,
-article .texto {
+article:not(#perimetral) .texto {
     padding:15px 30px;
     text-align:justify;
     line-height:1.3em;
     -moz-column-count:2; /* Firefox */
     -webkit-column-count:2; /* Safari and Chrome */
     column-count:2;
+    column-gap:40px;
+    -moz-column-gap:40px; /* Firefox */
+    -webkit-column-gap:40px; /* Safari and Chrome */
+}
+
+#perimetral {
+    -moz-column-count:1; /* Firefox */
+    -webkit-column-count:1; /* Safari and Chrome */
+    column-count:1;
     column-gap:40px;
     -moz-column-gap:40px; /* Firefox */
     -webkit-column-gap:40px; /* Safari and Chrome */
